@@ -1,0 +1,7 @@
+Gender,Age,Race_Ethnicity,Household_Size,Poverty_Income_Ratio,Poor_Appetite_Overeating,Feeling_Depressed,Work_Status,Avg_Exercise_Per_Day,Predicted_Avg_Sleep
+Male,35,Non-Hispanic White,2,4.5,Not at all,Not at all,Working at job/business,60.0,7.676503224748787
+Female,40,Non-Hispanic Black,4,3.0,Several days,Several days,Working at job/business,25.0,7.654295599161049
+Male,70,Mexican American,1,2.0,Not at all,Not at all,Not working,5.0,7.8763504706368535
+Female,25,Other Hispanic,3,1.3,Nearly every day,Nearly every day,Not working,0.0,8.053508303284087
+Male,50,Non-Hispanic Asian,3,2.2,More than half the days,More than half the days,Working at job/business,5.0,7.565608944687863
+Female,30,Non-Hispanic White,2,3.5,Several days,Several days,Working at job/business,45.0,7.93838370312267

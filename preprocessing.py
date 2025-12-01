@@ -43,14 +43,12 @@ def load_nhanes_data():
     demo_df = demo_df[demo_df['RIDAGEYR'] >= 18]
     print(f"Filtered DEMO: {initial_count} -> {len(demo_df)} rows (keeping 18+ only)")
     
-    # Keep only relevant columns from DEMO
     demo_df = demo_df[data_specs['DEMO']['cols']]
 
     # Initialize the final dataset with the filtered demographics data
     final_df = demo_df
 
     # 2. Iterate through the rest of the files, load, and merge
-    # Order matters less for inner join, but we process them sequentially
     file_keys = ["SLQ", "PAQ", "DPQ", "ALQ", "OCQ"]
     
     for key in file_keys:
@@ -60,11 +58,9 @@ def load_nhanes_data():
         
         print(f"Loading {path}...")
         try:
-            # Load the XPT file
             temp_df = pd.read_sas(path)
             
             # Select only specified columns (ensure SEQN is included for merging)
-            # Check if columns exist to avoid errors if file format changed slightly
             available_cols = [c for c in cols if c in temp_df.columns]
             if len(available_cols) < len(cols):
                 missing = set(cols) - set(available_cols)
